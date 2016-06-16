@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    <h1>Welcome to your profile!</h1>
+    <br>
+    <div class="panel panel-default">
+  <div class="panel-heading">Math</div>
+  <div class="panel-body"></div>
+  <table class="table">
+    <th>Number</th>
+    <th>Operator</th>
+    <th>Number</th>
+    <th>Result</th>
+    {% for item in data %}
+        <tr>
+         <td>{{ item.number1 }}</td>
+         <td>{{ item.operators}}</td>
+         <td>{{ item.number2 }}</td>
+         <td>{{ item.result }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    </div>
+    </div>
+{% endblock %}

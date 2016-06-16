@@ -1,13 +1,8 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Django Calculator</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "calculator/main.css" %}">
-</head>
+
 <body>
+{% block content %}
    <div class="container">
     <h1 align="center">Welcome to Django Calculator!</h1>
     <img src="{% static "calculator/IMG_3681.jpg" %}" alt="Hollin/William" align="right" height="200" width="200" class="img-thumbnail">
@@ -20,8 +15,7 @@
         {{ number1 }} {{ operators }} {{ number2 }} = {{ result }}
         <p></p>
     </form>
-       <br>
-    <br>
    </div>
+{% endblock %}
 </body>
 </html>
